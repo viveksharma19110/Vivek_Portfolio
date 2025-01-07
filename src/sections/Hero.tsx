@@ -51,7 +51,7 @@ function Hero() {
           delay: 1.35,
         }}
       >
-        I&apos;m a software engineer with expertise in creating Websites. I bring a robust foundation in full-stack
+        I am a software engineer with expertise in creating Websites. I bring a robust foundation in full-stack
         web development coupled with a passion for creating innovative digital solutions.
         
       </motion.p>

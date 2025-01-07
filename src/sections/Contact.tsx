@@ -18,8 +18,8 @@ function Contact() {
       <h2 className="contact-title">What&apos;s Next?</h2>
       <h2 className="contact-sub-title">Get In Touch</h2>
       <p className="contact-text">
-      I&apos;m currently seeking opportunities as a Full Stack Developer, Backend Developer,
-       Frontend Developer, or Data Analyst. My inbox is always open for potential collaborations, or just to connect! Feel free to reach out and I'll get back to you as soon as
+      I am currently seeking opportunities as a Full Stack Developer, Backend Developer,
+       Frontend Developer, or Data Analyst. My inbox is always open for potential collaborations, or just to connect! Feel free to reach out and I will get back to you as soon as
          possible
       </p>
       <div className="contact-cta">
