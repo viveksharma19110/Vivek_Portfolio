@@ -51,7 +51,7 @@ function Hero() {
           delay: 1.35,
         }}
       >
-        I'm a software engineer with expertise in creating Websites. I bring a robust foundation in full-stack
+        I&apos;m a software engineer with expertise in creating Websites. I bring a robust foundation in full-stack
         web development coupled with a passion for creating innovative digital solutions.
         
       </motion.p>
@@ -65,10 +65,7 @@ function Hero() {
           delay: 1.65,
         }}
       >
-        {/* <Button
-          text="Check out my course"
-          link="https://youtube.com/kishansheth21"
-        /> */}
+        
       </motion.div>
     </div>
   );
