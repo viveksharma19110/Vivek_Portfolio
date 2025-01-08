@@ -26,41 +26,37 @@ function Projects() {
       },
     },
     {
-      image: "/project2.png",
-      projectName: "Realtime Chat App",
-      projectLink: "https://netlify.com",
+      image: "/EduPoint.png",
+      projectName: "EduPoint",
+      projectLink: "",
       projectDescription:
-        "This is a chat app made with React and Node.js that sends real-time messages and is highly scalable. It uses advanced JavaScript concepts like debouncing and is optimized for React. It has 300+ stars on GitHub and over 180k views on YouTube.",
+        "I developed a full-stack Ed-Tech platform utilizing React.js, Node.js, Express.js, and MongoDB, incorporating features for seamless content creation, consumption, and rating. I implemented robust user authentication using JWT, integrated Cloudinary for efficient media storage, and employed bcrypt for enhanced security, ensuring a secure and user-friendly experience.",
       projectTech: [
         "React",
-        "Sockets",
+        "Redux",
         "Node.js",
         "Express",
         "MongoDB",
-        "Styled Components",
+        "JWT Token",
       ],
       projectExternalLinks: {
-        github: "",
-        externalLink: "",
+        github: "https://github.com/viveksharma19110/EduPoint",
+        externalLink: "https://edu-point-seven.vercel.app/",
       },
     },
     {
       image: "/project3.png",
-      projectName: "Netflix App",
-      projectLink: "https://netlify.com",
+      projectName: "Shopping Cart",
+      projectLink: "",
       projectDescription:
-        "I made a Netflix copy with TMBD Api. It has infinite scrolling and lets you watch movies by genre. You can also add movies to your favorites list.",
+        "I developed an e-commerce platform using React and Redux, implementing Redux slices for effective application state management. By leveraging useSelector and useDispatch, I ensured efficient data retrieval and streamlined state updates. Additionally, I integrated React Toast to provide real-time notifications, enhancing the user experience with timely alerts and updates.",
       projectTech: [
         "React",
-        "Node.js",
-        "Firebase",
-        "MongoDB",
-        "Express",
         "Redux Toolkit",
       ],
       projectExternalLinks: {
-        github: "",
-        externalLink: "",
+        github: "https://github.com/viveksharma19110/ShoppingCart-Redux",
+        externalLink: "https://shopping-cart-redux-fawn.vercel.app/",
       },
     },
   ];
@@ -109,7 +105,6 @@ function Projects() {
                   </div>
                 </div>
                 <div className="project-info">
-                  <p className="project-info-overline">Featured Project</p>
                   <h3 className="project-info-title">{projectName}</h3>
                   <div className="project-info-description">
                     <p>{projectDescription}</p>

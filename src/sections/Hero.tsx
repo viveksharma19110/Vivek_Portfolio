@@ -51,9 +51,12 @@ function Hero() {
           delay: 1.35,
         }}
       >
-        I am a software engineer with expertise in creating Websites. I bring a robust foundation in full-stack
-        web development coupled with a passion for creating innovative digital solutions.
-        
+        I am a software engineer with a strong foundation in full-stack web development,
+        specializing in building dynamic and user-centric websites. Passionate about exploring new technologies,
+        I leverage the latest tools and frameworks to create innovative, efficient digital solutions.
+        As a full-stack developer, I focus on delivering scalable web applications that enhance user experiences
+        and provide lasting impact.
+
       </motion.p>
       <motion.div
         className="hero-button"
@@ -65,7 +68,7 @@ function Hero() {
           delay: 1.65,
         }}
       >
-        
+
       </motion.div>
     </div>
   );

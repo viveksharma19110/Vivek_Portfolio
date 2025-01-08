@@ -17,7 +17,7 @@ function Experience() {
       name: "Aarvya Technologies",
       role: "Full Stack Developer",
       url: "",
-      start: "January 2021",
+      start: "November 2024",
       end: "Present",
       shortDescription: [
         "Developed a website using Next.js, focusing on frontend development",

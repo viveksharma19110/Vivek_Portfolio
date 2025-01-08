@@ -1,48 +1,121 @@
+"use client"
+import React, { useState } from "react";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { FaRegStar } from "react-icons/fa";
-import { FiGitBranch } from "react-icons/fi";
+import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
+import { HiOutlineMail } from "react-icons/hi";
 
 function Footer() {
-  const [githubInfo, setGitHubInfo] = useState({
-    stars: null,
-    forks: null,
-  });
+  const [showCopied, setShowCopied] = useState(false);
 
-  useEffect(() => {
-    fetch("https://api.github.com/repos/koolkishan/chat-app-react-nodejs")
-      .then((response) => response.json())
-      .then((json) => {
-        const { stargazers_count, forks_count } = json;
-        setGitHubInfo({
-          stars: stargazers_count,
-          forks: forks_count,
-        });
-      })
-      .catch((e) => console.error(e));
-  }, []);
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("viveksharma19110@gmail.com");
+    setShowCopied(true);
+    setTimeout(() => setShowCopied(false), 2000); // Hide the message after 2 seconds
+  };
 
   return (
-    <footer>
-      <Link
-        href="https://github.com/koolkishan/chat-app-react-nodejs"
-        target="_blank"
-        className="footer-link"
-      >
-        <span className="footer-info">Designed and Built by Kishan Sheth.</span>
-        {githubInfo && (
-          <div className="footer-git">
-            <div className="footer-git-item">
-              <FaRegStar className="footer-git-item-icon" />
-              <span className="footer-git-item-text">{githubInfo.stars}</span>
-            </div>
-            <div className="footer-git-item">
-              <FiGitBranch className="footer-git-item-icon" />
-              <span className="footer-git-item-text">{githubInfo.forks}</span>
-            </div>
-          </div>
-        )}
-      </Link>
+    <footer
+      style={{
+        textAlign: "center",
+        padding: "20px",
+        fontFamily: "var(--fira-code)",
+        color: "#CCD6F6",
+      }}
+    >
+      <div>
+        <h2
+          style={{
+            fontSize: "32px",
+            fontWeight: "bold",
+            marginBottom: "10px",
+          }}
+        >
+          Connect with me
+        </h2>
+        <p
+          style={{
+            fontSize: "16px",
+            margin: "10px 0",
+            color: "#CCD6F6",
+          }}
+        >
+          I would love to hear from you! Connect with me on my social media.
+        </p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "20px",
+            marginTop: "20px",
+          }}
+        >
+          <Link
+            href="https://github.com/viveksharma19110"
+            target="_blank"
+            style={{
+              color: "#CCD6F6",
+              fontSize: "24px",
+              textDecoration: "none",
+            }}
+          >
+            <FiGithub />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/vivekkumarsharma19110/"
+            target="_blank"
+            style={{
+              color: "#CCD6F6",
+              fontSize: "24px",
+              textDecoration: "none",
+            }}
+          >
+            <FiLinkedin />
+          </Link>
+          <Link
+            href="https://instagram.com/viveksharma19110"
+            target="_blank"
+            style={{
+              color: "#CCD6F6",
+              fontSize: "24px",
+              textDecoration: "none",
+            }}
+          >
+            <FiInstagram />
+          </Link>
+          <button
+            onClick={handleCopyEmail}
+            style={{
+              background: "none",
+              border: "none",
+              padding: 0,
+              cursor: "pointer",
+              color: "#CCD6F6",
+              fontSize: "24px",
+              position: "relative",
+            }}
+          >
+            <HiOutlineMail />
+            {showCopied && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "-30px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  background: "#4A5568",
+                  color: "#CCD6F6",
+                  padding: "4px 8px",
+                  borderRadius: "4px",
+                  fontSize: "12px",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Email copied!
+              </div>
+            )}
+          </button>
+        </div>
+      </div>
     </footer>
   );
 }

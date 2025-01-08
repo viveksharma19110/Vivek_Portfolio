@@ -28,17 +28,20 @@ function About() {
       <div className="about-grid">
         <div className="about-grid-info">
           <p className="about-grid-info-text">
-            Bonjour! I am a full-stack web developer and recent Electronics and Communications graduate from 
-            Netaji Subhas University of Technology (NSUT, Delhi). With expertise in both frontend and backend 
-            technologies, I specialize in building scalable web applications using ReactJS, Node.js, and Express,
-             complemented by proficiency in database management systems including PostgreSQL, MySQL, and MongoDB. 
-             My project portfolio showcases my ability to deliver comprehensive solutions, from developing a full-stack 
-             educational platform using the MERN stack to creating a real-time chat application with Socket.io integration.
-              I have also demonstrated my problem-solving skills through projects like an automated Amazon price tracking tool.
-               My strong foundation in C/C++, Java, and Python, combined with my passion for innovative technology solutions,
-                enables me to tackle complex development challenges while continuously expanding my technical expertise.
+            Bonjour! I am a full-stack web developer and recent Electronics and Communications graduate
+            from Netaji Subhas University of Technology (NSUT, Delhi). I specialize in building scalable
+            web applications using Next, ReactJS, Node.js, and Express, with expertise in PostgreSQL, MySQL, and
+            MongoDB. Additionally, I am a data analyst with strong knowledge in SQL and PowerBI, and I currently
+            work at Aarvy Technologies as a full-stack developer. My portfolio includes projects like a
+            full-stack educational platform using the MERN stack, a real-time chat application with Socket.io,
+            and an automated Amazon price tracking tool. With a strong foundation in C/C++, Java, and Python,
+            I am passionate about innovative solutions and tackling complex challenges. I have also solved 300+
+            DSA questions on Leetcode and CodeStudio combined, which has sharpened my problem-solving skills.
+            ReactJS, Node.js, and Express enable me to build dynamic and scalable applications, focusing on
+            clean architecture, high performance, and seamless integration of front-end and back-end technologies.
+            I continuously explore new technologies to ensure my solutions remain at the forefront of industry trends.
           </p>
-          
+
           <p className="about-grid-info-text">
             Here are a few technologies I have been working with recently:
           </p>
@@ -57,7 +60,7 @@ function About() {
             <li className="about-grid-info-list-item">MongoDB</li>
             <li className="about-grid-info-list-item">PowerBI</li>
             <li className="about-grid-info-list-item">Pandas</li>
-            <li className="about-grid-info-list-item">Numpy</li>
+            <li className="about-grid-info-list-item">NumPy</li>
           </ul>
         </div>
         <div className="about-grid-photo">
