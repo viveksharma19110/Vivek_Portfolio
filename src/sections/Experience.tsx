@@ -14,7 +14,7 @@ function Experience() {
 
   const expereinces = [
     {
-      name: "Aarvya Technologies",
+      name: "Aarvy Technologies",
       role: "Full Stack Developer",
       url: "",
       start: "November 2024",
