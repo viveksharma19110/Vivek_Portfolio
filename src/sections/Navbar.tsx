@@ -123,7 +123,7 @@ function Navbar() {
               delay: 0.6,
             }}
           >
-            <Button text="Resume" link="http://localhost:3002/Vivek_Kumar_Sharma_Resume.pdf" />
+            <Button text="Resume" link="https://vivekkumarsharma.vercel.app/Vivek_Kumar_Sharma_Resume.pdf" />
           </motion.div>
         </div>
       </div>
