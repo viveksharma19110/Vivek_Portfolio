@@ -12,14 +12,20 @@ const firaCode = Fira_Code({
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    // Ensure the app starts in dark mode on first load.
-    // (Theme toggle still works after this via Navbar.)
-    document.documentElement.setAttribute("data-theme", "dark");
-    document.body.setAttribute("data-theme", "dark");
-    try {
-      localStorage.setItem("theme", "dark");
-    } catch {
-      // ignore storage errors
+    const savedTheme = localStorage.getItem("theme");
+    const initialTheme: "light" | "dark" =
+      savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
+
+    document.documentElement.setAttribute("data-theme", initialTheme);
+    document.body.setAttribute("data-theme", initialTheme);
+
+    // Only set default if user never picked a theme.
+    if (savedTheme !== initialTheme) {
+      try {
+        localStorage.setItem("theme", initialTheme);
+      } catch {
+        // ignore storage errors
+      }
     }
   }, []);
 

@@ -5,7 +5,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FiMoon, FiSun } from "react-icons/fi";
 
 const applyTheme = (nextTheme: "light" | "dark") => {
   document.documentElement.setAttribute("data-theme", nextTheme);
@@ -15,7 +14,6 @@ const applyTheme = (nextTheme: "light" | "dark") => {
 function Navbar() {
   const [navbarVisible, setNavbarVisible] = useState(false);
   const [responsiveNavVisible, setResponsiveNavVisible] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
   const sectionLinks = [
     { name: "About", link: "/#about" },
     { name: "Experience", link: "/#experience" },
@@ -70,21 +68,9 @@ function Navbar() {
   }, [responsiveNavVisible]);
 
   useEffect(() => {
-    const initialTheme: "light" | "dark" = "dark";
-    setTheme(initialTheme);
-    applyTheme(initialTheme);
-    // Always start dark on open/refresh
-    localStorage.setItem("theme", initialTheme);
+    applyTheme("dark");
+    localStorage.setItem("theme", "dark");
   }, []);
-
-  useEffect(() => {
-    applyTheme(theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
-  };
 
   return (
     <nav>
@@ -149,26 +135,6 @@ function Navbar() {
               </motion.li>
             ))}
           </ul>
-          <motion.div
-            className="theme-toggle-wrapper"
-            initial={{ opacity: 0, y: -25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.3,
-              ease: "easeInOut",
-              delay: 0.55,
-            }}
-          >
-            <button
-              type="button"
-              className="theme-toggle"
-              onClick={toggleTheme}
-              aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-              title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-            >
-              {theme === "light" ? <FiMoon /> : <FiSun />}
-            </button>
-          </motion.div>
           <motion.div
             className="nav-items-button"
             initial={{ opacity: 0, y: -25 }}

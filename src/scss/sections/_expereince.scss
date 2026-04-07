@@ -1,5 +1,5 @@
 .experience {
-  margin: 10rem auto;
+  margin: 9rem auto;
   max-width: 700px;
   .title {
     font-family: var(--raleway);
@@ -116,6 +116,7 @@
     }
   }
   @media screen and (max-width: 968px) {
+    margin: 6rem auto;
     .title {
       h2 {
         &::after {
@@ -125,7 +126,7 @@
     }
   }
   @media screen and (max-width: 600px) {
-    margin: 5rem auto;
+    margin: 4.5rem auto;
     .container {
       grid-template-columns: 1fr;
       padding: 1rem;

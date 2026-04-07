@@ -1,5 +1,5 @@
 .about {
-  margin: 10rem 0;
+  margin: 9rem 0;
   .title {
     font-family: var(--raleway);
     color: var(--lightest-slate);
@@ -88,7 +88,7 @@
         position: absolute;
         height: 350px;
         width: 350px;
-        background-color: #9d00ff4d;
+        background-color: var(--image-overlay);
         border-radius: 0.2rem;
       }
       .overlay-border {
@@ -109,7 +109,7 @@
         object-fit: cover;
         img {
           z-index: 0;
-          filter: grayscale(100%);
+          filter: none;
           transition: 0.3s ease-in-out;
           border-radius: 0.2rem;
         }
@@ -117,7 +117,7 @@
     }
   }
   @media screen and (max-width: 1080px) {
-    margin: 5rem 0;
+    margin: 6rem 0;
     &-grid {
       &-photo {
         .overlay {
@@ -137,7 +137,7 @@
     }
   }
   @media screen and (max-width: 768px) {
-    margin: 5rem auto;
+    margin: 4.5rem auto;
     .title {
       h2 {
         &::after {
