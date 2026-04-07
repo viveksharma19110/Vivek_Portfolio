@@ -18,13 +18,12 @@ function Contact() {
       <h2 className="contact-title">What&apos;s Next?</h2>
       <h2 className="contact-sub-title">Get In Touch</h2>
       <p className="contact-text">
-      I am currently seeking opportunities as a Full Stack Developer, Backend Developer,
-       Frontend Developer, or Data Analyst. My inbox is always open for potential collaborations, or just to connect! Feel free to reach out and I will get back to you as soon as
-         possible
+      I am currently seeking opportunities as a Data Analyst, Business Analyst, or Product Analyst, with a strong focus on extracting insights, solving business problems, and building data-driven solutions. Open to collaborations and connections—feel free to reach out, and I’ll get back to you at the earliest
       </p>
       <div className="contact-cta">
         <Button link="mailto:viveksharma19110@gmail.com" text="Say Hello" />
       </div>
+      <p className="contact-whatsapp">Contact Number: 7011248517 (also available on WhatsApp)</p>
     </motion.div>
   );
 }

@@ -14,21 +14,34 @@ function Experience() {
 
   const expereinces = [
     {
-      name: "Aarvy Technologies",
-      role: "Full Stack Developer",
-      url: "",
-      start: "November 2024",
+      name: "GlobalLogic",
+      role: "Data Analyst",
+      url: "https://www.globallogic.com/",
+      start: "June 2025",
       end: "Present",
       shortDescription: [
-        "Developed a website using Next.js, focusing on frontend development",
-        "Created websites with real-time client usage, implementing responsive and interactive user interfaces.",
-        "Acquired hands-on experience in full-stack development, with a strong emphasis on frontend technologies.",
+        "Built interactive dashboards in Power BI to track KPIs, performance trends, and operational insights for stakeholders.",
+        "Prepared and cleaned datasets in Excel and Google Sheets to support reliable reporting and analysis.",
+        "Translated business questions into metrics, definitions, and reporting logic (business analysis + product insights).",
+        "Designed repeatable data preparation and automation workflows to keep reports consistent and up to date.",
+      ],
+    },
+    {
+      name: "Aarvy Technologies",
+      role: "Full Stack Developer",
+      url: "https://aarvytechnologies.com/",
+      start: "November 2024",
+      end: "April 2025",
+      shortDescription: [
+        "Built and optimized SQL queries, views, and stored procedures for reporting and application features.",
+        "Integrated SQL-driven APIs with Next.js interfaces to deliver data-backed dashboards and workflows.",
+        "Improved data quality and performance by validating schemas, joining large datasets, and tuning query logic.",
       ],
     },
     {
       name: "Adroid Connectz",
       role: "Data Science Intern",
-      url: "",
+      url: "https://adroidconnectz.com/",
       start: "June 2023",
       end: "July 2023",
       shortDescription: [
@@ -47,8 +60,8 @@ function Experience() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       variants={{
-        visible: { opacity: 1, y: -50 },
-        hidden: { opacity: 0, y: 0 },
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 40 },
       }}
     >
       <div className="title">

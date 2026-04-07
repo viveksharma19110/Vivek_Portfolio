@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 function Projects() {
-  const projectsData = [
+  const projectCategories = {
+    tech: [
     {
       image: "/imaginify.png",
       projectName: "Imaginify",
-      projectLink: "",
       projectDescription:
         "Developed a sophisticated web application leveraging Next.js, TypeScript, and MongoDB, while incorporating Cloudinary AI for advanced image processing capabilities and Shadcn/Clerk for seamless UI/authentication integration, resulting in an intuitive interface optimized for AI-driven image manipulation tasks.",
       projectTech: [
@@ -28,7 +28,6 @@ function Projects() {
     {
       image: "/EduPoint.png",
       projectName: "EduPoint",
-      projectLink: "",
       projectDescription:
         "I developed a full-stack Ed-Tech platform utilizing React.js, Node.js, Express.js, and MongoDB, incorporating features for seamless content creation, consumption, and rating. I implemented robust user authentication using JWT, integrated Cloudinary for efficient media storage, and employed bcrypt for enhanced security, ensuring a secure and user-friendly experience.",
       projectTech: [
@@ -47,7 +46,6 @@ function Projects() {
     {
       image: "/project3.png",
       projectName: "Shopping Cart",
-      projectLink: "",
       projectDescription:
         "I developed an e-commerce platform using React and Redux, implementing Redux slices for effective application state management. By leveraging useSelector and useDispatch, I ensured efficient data retrieval and streamlined state updates. Additionally, I integrated React Toast to provide real-time notifications, enhancing the user experience with timely alerts and updates.",
       projectTech: [
@@ -59,7 +57,35 @@ function Projects() {
         externalLink: "https://shopping-cart-redux-fawn.vercel.app/",
       },
     },
-  ];
+  ],
+    data: [
+      {
+        image: "/overview_image.png",
+        projectName: "Sales Analytics Dashboard",
+        projectDescription:
+          "Built KPI dashboards to track sales performance, uncover trends in product & region, and support stakeholder decision-making. Cleaned and transformed raw datasets in Excel/Sheets to keep reporting accurate and consistent.",
+        projectTech: ["Power BI", "Python", "Pandas", "Excel", "Google Sheets"],
+        projectExternalLinks: {
+          github: "https://github.com/viveksharma19110",
+          externalLink: "",
+        },
+      },
+      {
+        image: "/project3.png",
+        projectName: "Customer Churn Analysis",
+        projectDescription:
+          "Developed churn analytics to identify high-risk segments and explain drivers behind churn. Produced retention insights that help product and customer success teams prioritize interventions and improve outcomes.",
+        projectTech: ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Seaborn"],
+        projectExternalLinks: {
+          github: "https://github.com/viveksharma19110",
+          externalLink: "",
+        },
+      },
+    ],
+  } as const;
+
+  const [activeCategory, setActiveCategory] = useState<"tech" | "data">("data");
+  const activeProjects = projectCategories[activeCategory];
   return (
     <div className="projects" id="work">
       <motion.div
@@ -69,18 +95,33 @@ function Projects() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         variants={{
-          visible: { opacity: 1, y: -50 },
-          hidden: { opacity: 0, y: 0 },
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 40 },
         }}
       >
         <h2>Some Things I have Built</h2>
       </motion.div>
+      <div className="projects-tabs">
+        <button
+          className={`projects-tab ${activeCategory === "data" ? "active" : ""}`}
+          onClick={() => setActiveCategory("data")}
+          type="button"
+        >
+          Data Projects
+        </button>
+        <button
+          className={`projects-tab ${activeCategory === "tech" ? "active" : ""}`}
+          onClick={() => setActiveCategory("tech")}
+          type="button"
+        >
+          Tech Projects
+        </button>
+      </div>
       <div className="projects-container">
-        {projectsData.map(
+        {activeProjects.map(
           ({
             image,
             projectDescription,
-            projectLink,
             projectExternalLinks,
             projectName,
             projectTech,
@@ -94,8 +135,8 @@ function Projects() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 variants={{
-                  visible: { opacity: 1, y: -50 },
-                  hidden: { opacity: 0, y: 0 },
+                  visible: { opacity: 1, y: 0 },
+                  hidden: { opacity: 0, y: 40 },
                 }}
               >
                 <div className="project-image">
@@ -127,16 +168,18 @@ function Projects() {
                         <FiGithub />
                       </Link>
                     </li>
-                    <li className="project-info-links-item">
-                      <Link
-                        href={projectExternalLinks.externalLink}
-                        className="project-info-links-item-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FiExternalLink />
-                      </Link>
-                    </li>
+                    {projectExternalLinks.externalLink ? (
+                      <li className="project-info-links-item">
+                        <Link
+                          href={projectExternalLinks.externalLink}
+                          className="project-info-links-item-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FiExternalLink />
+                        </Link>
+                      </li>
+                    ) : null}
                   </ul>
                 </div>
               </motion.div>

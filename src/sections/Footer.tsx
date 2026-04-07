@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import Link from "next/link";
-import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 
 function Footer() {
@@ -19,7 +19,7 @@ function Footer() {
         textAlign: "center",
         padding: "20px",
         fontFamily: "var(--fira-code)",
-        color: "#CCD6F6",
+        color: "var(--lightest-slate)",
       }}
     >
       <div>
@@ -36,7 +36,7 @@ function Footer() {
           style={{
             fontSize: "16px",
             margin: "10px 0",
-            color: "#CCD6F6",
+            color: "var(--slate)",
           }}
         >
           I would love to hear from you! Connect with me on my social media.
@@ -53,7 +53,7 @@ function Footer() {
             href="https://github.com/viveksharma19110"
             target="_blank"
             style={{
-              color: "#CCD6F6",
+              color: "var(--lightest-slate)",
               fontSize: "24px",
               textDecoration: "none",
             }}
@@ -64,23 +64,12 @@ function Footer() {
             href="https://www.linkedin.com/in/vivekkumarsharma19110/"
             target="_blank"
             style={{
-              color: "#CCD6F6",
+              color: "var(--lightest-slate)",
               fontSize: "24px",
               textDecoration: "none",
             }}
           >
             <FiLinkedin />
-          </Link>
-          <Link
-            href="https://instagram.com/viveksharma19110"
-            target="_blank"
-            style={{
-              color: "#CCD6F6",
-              fontSize: "24px",
-              textDecoration: "none",
-            }}
-          >
-            <FiInstagram />
           </Link>
           <button
             onClick={handleCopyEmail}
@@ -89,7 +78,7 @@ function Footer() {
               border: "none",
               padding: 0,
               cursor: "pointer",
-              color: "#CCD6F6",
+              color: "var(--lightest-slate)",
               fontSize: "24px",
               position: "relative",
             }}
@@ -102,8 +91,8 @@ function Footer() {
                   top: "-30px",
                   left: "50%",
                   transform: "translateX(-50%)",
-                  background: "#4A5568",
-                  color: "#CCD6F6",
+                  background: "var(--light-navy)",
+                  color: "var(--lightest-slate)",
                   padding: "4px 8px",
                   borderRadius: "4px",
                   fontSize: "12px",

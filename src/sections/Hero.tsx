@@ -1,5 +1,3 @@
-import Button from "@/components/Button";
-import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 function Hero() {
@@ -39,7 +37,7 @@ function Hero() {
           delay: 1.05,
         }}
       >
-        I craft things for the web.
+        Developer & Data Analyst.
       </motion.h3>
       <motion.p
         className="hero-text"
@@ -51,11 +49,10 @@ function Hero() {
           delay: 1.35,
         }}
       >
-        I am a software engineer with a strong foundation in full-stack web development,
-        specializing in building dynamic and user-centric websites. Passionate about exploring new technologies,
-        I leverage the latest tools and frameworks to create innovative, efficient digital solutions.
-        As a full-stack developer, I focus on delivering scalable web applications that enhance user experiences
-        and provide lasting impact.
+        I build modern web products and data-driven solutions. My work combines
+        Next.js development with practical analytics using Power BI, Excel, and
+        Google Sheets to turn raw data into clear business insights and better
+        decision-making.
 
       </motion.p>
       <motion.div

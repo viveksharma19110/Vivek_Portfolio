@@ -1,6 +1,6 @@
 .contact {
   max-width: 700px;
-  margin: 15rem auto;
+  margin: 10rem auto 8rem;
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -37,5 +37,12 @@
     .btn {
       padding: 1rem 2rem;
     }
+  }
+  .contact-whatsapp {
+    margin-top: 0.5rem;
+    color: var(--slate);
+    font-family: var(--raleway);
+    font-size: var(--tbase);
+    text-align: center;
   }
 }

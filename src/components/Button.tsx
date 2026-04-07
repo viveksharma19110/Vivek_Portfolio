@@ -1,11 +1,29 @@
-import Link from "next/link";
 import React from "react";
 
-function Button({ text, link }: { text: string; link: string }) {
+function Button({
+  text,
+  link,
+  download,
+  downloadFilename,
+}: {
+  text: string;
+  link: string;
+  download?: boolean;
+  downloadFilename?: string;
+}) {
+  const isExternal = /^https?:\/\//i.test(link);
+  const derivedFilename = downloadFilename ?? link.split("/").pop() ?? undefined;
+
   return (
-    <Link className="btn" href={link}>
+    <a
+      className="btn"
+      href={link}
+      target={!download && isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      download={download ? derivedFilename ?? true : undefined}
+    >
       {text}
-    </Link>
+    </a>
   );
 }
 

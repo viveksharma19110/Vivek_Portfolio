@@ -1,13 +1,18 @@
 nav {
   min-height: 60px;
   .wrapper {
+    position: fixed;
+    top: 0;
+    z-index: 100;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 4rem;
     transition: 0.3s ease-in-out;
-    position: relative;
+    background-color: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--lightest-navy);
     .brand {
       a {
         color: var(--theme-color);
@@ -41,6 +46,7 @@ nav {
     }
     .nav-items {
       display: flex;
+      align-items: center;
       gap: 3em;
       color: var(--lightest-slate);
       font-family: var(--fira-code);
@@ -72,6 +78,23 @@ nav {
           }
         }
       }
+      .theme-toggle {
+        border: 1px solid var(--theme-color);
+        background-color: transparent;
+        color: var(--theme-color);
+        border-radius: 999px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+          background-color: var(--lightest-navy);
+        }
+      }
     }
 
     @media screen and (max-width: 1020px) {
@@ -99,6 +122,9 @@ nav {
         &-list {
           flex-direction: column;
         }
+        .theme-toggle-wrapper {
+          margin: 1rem 0;
+        }
       }
 
       .nav-responsive {
@@ -109,13 +135,8 @@ nav {
     }
   }
   .blur-nav {
-    height: 80px;
-    position: fixed;
-    top: 0;
     transition: 0.3s ease-in-out;
-    z-index: 100;
-    background-color: rgba(10, 25, 47, 0.85);
+    background-color: var(--navbar-bg);
     box-shadow: 0 10px 30px -10px var(--navy-shadow);
-    backdrop-filter: blur(10px);
   }
 }
